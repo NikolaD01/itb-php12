@@ -1,0 +1,67 @@
+html {
+  text-align: center;
+}
+
+p {
+  font: 18px   Arial, Helvetica, sans-serif;
+  background: blanchedalmond;
+  color: #444;
+  border: solid 2px black;
+}
+
+.klasa {
+  color: purple;
+
+}
+
+#p1 {
+  color: brown;
+  
+}
+
+a:visited {
+  color: magenta;
+}
+
+a:link {
+  color: navy;
+}
+
+a:hover {
+  background-color: #39F88A;
+}
+
+a:active {
+  font-size: 24px;
+}
+
+li:nth-child(3){
+  background-color: yellow;
+}
+
+/* p:nth-of-type(2){
+  border:5px dotted silver;
+}
+ */
+/* p:first-child {
+  border: 5px dotted silver;
+}
+
+p:first-of-type {
+  border-radius: 20px;
+} */
+/* div p {
+  font-size: 30px;
+} */
+
+/* div>p {
+  font-size: 30px;
+} */
+
+/* div+p {
+  font-size: 30px;
+} */
+
+/* div~p {
+  font-size: 30px;
+} */

@@ -1,0 +1,39 @@
+body {
+  background-color: gray;
+  text-align: center;
+}
+
+
+
+h2 {
+  text-align: center;
+  color: purple;
+}
+
+
+img {
+  width: 100px;
+  border: 10px red double;
+}
+
+
+
+p {
+  color: red;
+}
+
+.p-two>a {
+  color: red;
+  transition: 0.2s;
+  
+  
+}
+
+.p-two>a:hover {
+  color: green;
+ 
+}
+
+.p-two {
+  color: blue;
+}
