@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vezba1.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="test.php" method="get">
+    <fieldset>
+      <legend>Form Validation</legend>
+      <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="uname">Username: </label>
+        <input type="text" name="uname" id="uname">
+      </div>
+      <div>
+        <label for="pwd">Password: </label>
+        <input type="password" name="pwd" id="pwd">
+      </div>
+      <div>
+        <label for="pwdrepeat">Re-type password: </label>
+        <input type="password" name="pwdrepeat" id="pwdrepeat">
+      </div>
+      <div>
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" id="male">Male
+        <input type="radio" name="gender" id="female">Female
+        <input type="radio" name="gender" id="other">Other
+      </div>
+      <div>
+        <label for="skills">Programming skills: </label>
+        <input type="checkbox" name="java" id="java">Java
+        <input type="checkbox" name="android" id="android">Android
+        <input type="checkbox" name="ruby" id="ruby">Ruby
+        <input type="checkbox" name="net" id="net">Net
+      </div>
+      <div>
+        <label for="cont">Contact no: </label>
+        <input type="number" name="cont" id="cont">
+      </div>
+      <div>
+        <label for="mail">Email: </label>
+        <input type="email" name="mail" id="mail">
+      </div>
+      <div>
+        <label for="college">College: </label>
+        <select name="college" id="college">
+          <option value="">Select</option>
+          <option value="ftn">FTN</option>
+          <option value="pmf">PMF</option>
+          <option value="etf">ETF</option>
+        </select>
+      </div>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</body>
+</html>
