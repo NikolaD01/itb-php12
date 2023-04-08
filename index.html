@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="test.php" method="post">
+    <input type="hidden" name="id" value="5">
+    <fieldset>
+      <legend>Osnovni Podaci</legend>
+      <p>
+        <label for="username">Username:</label>
+        <input readonly="readonly" type="text" name="username" id="username"value="Nikola" placeholder="Username">
+      </p>
+      <p>
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd" placeholder="Password">
+      </p>
+      <!-- <p>
+        <label for="search">Search</label>
+        <input type="search" name="search" id="search">
+      </p> -->
+    </fieldset>
+    <fieldset>
+      <legend>Dodatni Podaci</legend>
+      <p>
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" min="0" max="130" >
+      </p>
+      <p>
+        <label for="mail">Email: </label>
+        <input type="email" name="mail" id="mail">
+      </p>
+      <p>
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" id="male" value="male"> Male
+        <input type="radio" name="gender" id="female" value="female">Female
+        <input type="radio" name="gender" id="other" value="other">Other
+      </p>
+      <p>
+        <label for="sub">Subscribe to email newsletter? </label>
+        <input type="radio" name="sub" id="yes" value="yes" checked="checked">Yes
+        <input type="radio" name="sub" id="no" value="no">No     
+      </p>
+      <p>
+        <label for="course">Odaberite kurseve: </label> <br>
+        <input type="checkbox" name="html" id="html" value="true">HTML <br>
+        <input type="checkbox" name="css" id="css" value="true">CSS <br>
+        <input type="checkbox" name="js" id="js" value="true">JS <br>
+        <input type="checkbox" name="php" id="php" value="true">PHP <br>
+      </p>
+      <p>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+          <option value="">Izaberi opciju</option>
+          <optgroup label="Grad">
+            <option value="sb">Subotica</option>
+            <option value="ns">Novi Sad</option>
+            <option value="ni">Nis</option>
+          </optgroup>
+          <optgroup label="Opstina">
+            <option value="nb">Novi Beograd</option>
+            <option value="vd">Vozdovac</option>
+          </optgroup>
+        </select>
+      </p>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
