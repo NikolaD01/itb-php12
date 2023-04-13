@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+table {
+  text-align: left;
+  width: 50%;
+}
+
+tr {
+  width: 100px;
+}
+
+tr:nth-child(3) {
+  background-color: yellow;
+}
+
+
+tr.table2> th:nth-child(3), td:nth-child(3) {
+  background-color: yellow;
+}
+
+

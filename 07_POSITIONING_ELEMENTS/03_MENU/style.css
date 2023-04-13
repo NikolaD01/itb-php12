@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  padding-top: 40px;
+}
+ */
+
+ .red {
+  position: relative;
+  top: 40px;
+  overflow: hidden;
+ }
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.topbar ul {
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.topbar ul li {
+  background-color: rgb(73, 70, 70);
+  border: 1px solid white;
+  float: left;
+  width: 25%;
+  text-align: center;
+
+}
+
+.topbar ul li a {
+  background-color: rgb(73, 70, 70);
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.topbar ul li a:hover {
+  background-color: rgb(243, 25, 25);
+}
+
+.red aside {
+  float: left;
+  width: 30%;
+  
+  background-color: aquamarine;
+
+}
+
+.red aside ul {
+  list-style-type: none;
+}
+
+.red aside ul li {
+  background-color: rgb(24, 172, 31);
+  border: 1px solid white;
+  text-align: center;
+}
+
+.red aside ul li a {
+  color: white;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.red aside ul li a:hover {
+  background-color: rgb(16, 129, 22);
+}
+.red section {
+  float: left;
+  width: 70%;
+  background-color: plum;
+  padding: 10px;
+}
+
+/* Padaljuci  meni */
+
+.dropdown {
+  display: none;
+}
+
+.topbar li:nth-child(4):hover .dropdown {
+  display: block;
+}

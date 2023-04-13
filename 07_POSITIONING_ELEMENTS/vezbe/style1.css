@@ -1,0 +1,19 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+
+  background-image: url("brzo-i-efikasno-ciscenje-stanova-novi-sad-5425635627881-71792123315.jpg");
+  height: 100px;
+  color: white;
+}
+
+div { 
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  top: 40.8px; /* visina elemnta je 18.4 */
+}
