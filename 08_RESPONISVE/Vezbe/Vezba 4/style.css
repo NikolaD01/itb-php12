@@ -2,11 +2,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .row {
   width: 100%;
   overflow: hidden;
+}
+
+.padding {
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 img {
@@ -48,11 +54,35 @@ img {
 }
 
 
+.inv-m {
+  display: none;
+}
+
+ul {
+  background-color: rgb(44, 85, 219);
+  
+  width: 100%;
+  overflow: hidden;
+}
+
+ul li {
+  float: none;
+  width: 100%;
+  border-top: 1px solid white;
+  
+}
+.col-7 a {
+  background-color: rgb(207, 203, 203);
+  border-bottom: 5px white solid;
+  color: black;
+  padding: 10px;
+
+  
+}
 
 /* TABLET */
 
-@media only screen 
-and (min-width:600px) {
+@media only screen and (min-width:600px) {
   .col-t-1 {
     /* width: 8.33%; */
     width:  calc(100%/12);
@@ -105,6 +135,7 @@ and (min-width:600px) {
   }
   .col-3 {
     width:  calc(100%/12*3);
+    
   }
   .col-4 {
     width:  calc(100%/12*4);
@@ -138,8 +169,23 @@ and (min-width:600px) {
     display: block;
   }
 
- 
+  .inv-m {
+    display: block;
+  } 
+  ul {
+    padding: 5px;
+  }
+    
+  ul li  {
+    float: left;
+    list-style-type: none;
+    width: 11%;
+    border-top: 0;
+  }
+
 }
+
+
 
 
 
@@ -148,24 +194,60 @@ header {
   color: rgb(44, 85, 219);
 }
 
-ul {
-  width: 50%;
-  overflow: hidden;
+
+
+
+
+
+
+h2 {
+  font-size: 1.9rem;
+  color: rgb(43, 62, 126);
+  
 }
 
-ul li  {
-  float: left;
-  list-style-type: none;
-  width: 20%;
+h3 {
+  font-size: 1.7rem;
+  margin: 7px;
 }
+
+
 
 a {
-  background-color: rgb(227, 238, 241);
-  border: 2px solid white;
-  border-radius: 4px;
-  color: black;
+ 
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
   padding: 5px;
   display: block;
   font-weight: bold;
   text-decoration: none;
+ 
+}
+
+label {
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+
+label, input  {
+  display: block;
+}
+
+input,textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: max-content;
+  padding: 5px 8px;
+  background-color: rgb(46, 111, 196);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.divin {
+  display: inline;
 }
