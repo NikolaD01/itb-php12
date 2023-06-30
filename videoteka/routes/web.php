@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/lan/{locale}', function (string $locale)
+{
+    App::setLocale($locale);
+
+    return redirect()->back();
+})->whereIn('locale', ['en', 'sr'])->name('lang');
+
 Route::get('/', function () {
     return view('welcome');
 });
