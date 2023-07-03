@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('layouts.app', function ($view)
         {
-            $view->with('currentLoc',App::currentLocale()); // saljemo parametar sa withom
+            $view->with('currentLocale',App::currentLocale()); // saljemo parametar sa withom
         }); // Composer prosledjujemo nesto saljemo putanju do blade fajla sta prosledjjemo
     }
 }

@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
+
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -31,16 +34,40 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('lang', ['locale' => 'en']); }}">EN</a>
+                            @if($currentLocale=="en")
+                                <span class="nav-link text-primary" >EN</span>
+                            @else
+                                <a class="nav-link" href="{{ route('lang', ['locale' => 'en']); }}">EN</a>
+                            @endif
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('lang', ['locale' => 'sr']); }}">SR</a>
+                            @if($currentLocale=="sr")
+                                <span class="nav-link text-primary" >SR</span>
+                            @else
+                                <a class="nav-link" href="{{ route('lang', ['locale' => 'sr']); }}">SR</a>
+                            @endif
                         </li>
                     </ul>
 
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a id="navbarAdministacija" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Settings')}}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarAdministacija">
+                                <a class="dropdown-item" href="{{ route('genre.index') }}">
+                                    {{ __('Genres') }}
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                     <!-- Right Side Of Navbar -->
+
                     <ul class="navbar-nav ms-auto">
+
                         <!-- Authentication Links -->
+
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -65,7 +92,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -83,3 +109,5 @@
     </div>
 </body>
 </html>
+
+

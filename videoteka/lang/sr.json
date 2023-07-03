@@ -1,0 +1,11 @@
+{
+  "Login" : "Prijava",
+  "Email Address" : "Email Adresa",
+  "Password" : "Lozinka",
+  "Remember Me" : "Zapamti me",
+  "Logout" : "Odjavi me",
+  "You are logged in!" : "Uspesno ste prijavljeni!",
+  "Genres": "Zanrovi",
+  "Settings": "Administracija",
+  "Edit" : "Izmeni"
+}

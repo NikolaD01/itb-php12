@@ -141,5 +141,6 @@ return [
     */
 
     'attributes' => [
+        'name_en'=>'naziv na engleskom'
     ],
 ];
