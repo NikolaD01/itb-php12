@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 // use Illuminate\Support\Facades\App;
 use App\Http\Controllers\GenreController;
-use App\Http\Controllers\PeopleController;
+use App\Http\Controllers\PersonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +53,36 @@ Route::middleware('auth')->group(function () {
     Route::get('/genre/{genre}/edit', [GenreController::class, 'edit'])
     ->name('genre.edit');
 
+    //izmena postojećeg podatka // put metodom stavljao podatke unutar formui
+    Route::put('/genre/{genre}', [GenreController::class, 'update'])
+    ->name('genre.update');
+
+
+    //brisanje podatka
+    Route::delete('/genre/{genre}', [GenreController::class, 'destroy'])
+    ->name('genre.destroy');
+
+
+    // SVIH podataka
+    Route::get('/person', [PersonController::class, 'index'])
+    ->name('person.index');
+
+    Route::get('/person/create', [PersonController::class, 'create'])
+    ->name('person.create');
+
+    Route::post('/person', [PersonController::class, 'store'])
+    ->name('person.store');
+
+    // izmena podataka
+    Route::get('/person/{person}/edit', [PersonController::class, 'edit'])
+    ->name('person.edit');
+
+    //izmena postojećeg podatka // put metodom stavljao podatke unutar formui
+    Route::put('/person/{person}', [PersonController::class, 'update'])
+    ->name('person.update');
+
 });
+
 
 require __DIR__.'/auth.php';
 

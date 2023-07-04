@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Genre;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class GenreController extends Controller
 {
@@ -63,6 +64,10 @@ class GenreController extends Controller
 
         */ 
         Genre::create($request->all()); 
+
+        $request->session()->flash('alertType', 'success');
+        $request->session()->flash('alertMsg', 'Successfully added ');
+
         return redirect()->route('genre.index');
     }
 
@@ -90,7 +95,23 @@ class GenreController extends Controller
      */
     public function update(Request $request, Genre $genre)
     {
-        //
+        $request->validate([
+            'name_en' => 
+            ['required',
+            //'unique:genres'
+            Rule::unique('genres','name_en')->ignore($genre->id),'alpha'],
+            
+            'name_sr' => ['nullable',
+            Rule::unique('genres','name_sr')->ignore($genre->id),
+            'alpha']
+        ]);
+
+        $genre->update($request->all());
+
+        $request->session()->flash('alertType', 'success');
+        $request->session()->flash('alertMsg', 'Successfully uptaded ');
+
+        return redirect()->route('genre.index');
     }
 
     /**
@@ -98,6 +119,11 @@ class GenreController extends Controller
      */
     public function destroy(Genre $genre)
     {
-        //
-    }
-}
+        $genre->delete();
+        /*
+        $request->session()->flash('alertType', 'success');
+        $request->session()->flash('alertMsg', 'Successfully delted ');
+        */
+        return redirect()->route('genre.index');
+    }      
+}  

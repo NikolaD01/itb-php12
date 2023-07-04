@@ -4,6 +4,12 @@
 <div class="container">
   <div class="row justify-content-center">
       <div class="col-md-8">
+        @if(session('alertMsg'))
+        <div class="alert alert-{{session('alertType')}} alert-dismissible fade show" role="alert">
+          {{__(session('alertMsg'))}}  
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
           <div class="row">
             <a href="{{ route('genre.create') }} "class="btn btn-primary">{{ __('Create') }}</a>
           </div>
@@ -25,7 +31,14 @@
                         <td>{{ $g->name_en}}</td>
                         <td>{{ $g->name_sr}}</td>
                         <td>
-                          <a href="{{ route('genre.edit', ['genre'=>$g->id]) }} "class="btn btn-success btn-sm">{{ __('Edit') }}</a>
+                          <div class="btn-group" role="group" >
+                            <a href="{{ route('genre.edit', ['genre'=>$g->id]) }} "class="btn btn-success btn-sm">{{ __('Edit') }}</a>
+                            <form method="POST"action="{{ route('genre.destroy', ['genre'=>$g->id]) }}">
+                              @method('delete')
+                              @csrf
+                              <button type="submit" class="btn btn-sm btn-danger">{{ __('Delete') }}</button>
+                            </form>
+                          </div>
                         </td>
                       </tr>  
                     @endforeach

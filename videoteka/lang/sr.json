@@ -7,5 +7,9 @@
   "You are logged in!" : "Uspesno ste prijavljeni!",
   "Genres": "Zanrovi",
   "Settings": "Administracija",
-  "Edit" : "Izmeni"
+  "Edit" : "Izmeni",
+  "Save" : "Sacuvaj",
+  "Cancel" : "Odustani",
+  "Name EN" : "Ime EN",
+  "Name SR" : "Ime SR"
 }
