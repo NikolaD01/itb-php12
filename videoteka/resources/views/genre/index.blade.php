@@ -20,6 +20,7 @@
                 <table class="table table-striped">
                   <thead>
                     <tr>
+                      <th scope="col">{{__('No.')}}</th>
                       <th schop="col">id</th>
                       <th schop="col">{{__("Name EN")}}</th>
                       <th schop="col">{{__("Name SR")}}</th>
@@ -27,6 +28,7 @@
                     </tr>
                     @foreach ($data as $g)
                       <tr>
+                        <td>{{ ($data->currentPage() -1 ) * $data->perPage() + $loop->iteration}}</td>
                         <td>{{ $g->id }}</td>
                         <td>{{ $g->name_en}}</td>
                         <td>{{ $g->name_sr}}</td>
@@ -44,6 +46,7 @@
                     @endforeach
                   </thead>
                 </table>
+                {{ $data->links() }}
               </div>
             </div>
         </div>

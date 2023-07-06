@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\App;
 
 class GenreController extends Controller
 {
@@ -14,9 +15,27 @@ class GenreController extends Controller
     public function index()
     {
 
-        //all dovlaci sve podatke iz tabele genres
+        $locale = App::currentLocale(); 
 
-        $data = Genre::all();
+    
+
+        if($locale=='en')
+        {
+
+            // paginate prikazuje broj rezultata
+            $data = Genre::orderBy('name_en')->paginate(3);
+        }
+        elseif($locale=='sr')
+        {
+            $data = Genre::orderBy('name_sr')->paginate(3);
+        }
+        else
+        {
+                //all dovlaci sve podatke iz tabele genres
+
+                 $data = Genre::all();
+        }
+  
 
         return view('genre.index' , ['data'=>$data]); // untra foldera genre procitaj index
         /*

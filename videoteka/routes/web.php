@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // use Illuminate\Support\Facades\App;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\FilmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,14 @@ Route::middleware('auth')->group(function () {
     Route::put('/person/{person}', [PersonController::class, 'update'])
     ->name('person.update');
 
+    //detaljan prikaz podatka
+    Route::get('/film/{film}', [FilmController::class, 'show'])
+    ->name('film.show');
+
+    Route::resource('genre', GenreController::class)->except(['show']);;
+
+
+    
 });
 
 
