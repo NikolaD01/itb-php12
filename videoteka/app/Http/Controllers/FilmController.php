@@ -20,7 +20,9 @@ class FilmController extends Controller
      */
     public function create()
     {
-        //
+        $genres = Genre::all():
+
+        return view('film.create', compact('genres'));
     }
 
     /**

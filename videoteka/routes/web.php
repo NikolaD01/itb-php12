@@ -86,7 +86,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/film/{film}', [FilmController::class, 'show'])
     ->name('film.show');
 
-    Route::resource('genre', GenreController::class)->except(['show']);;
+    Route::resource('film   ', GenreController::class)->except(['show']);;
 
 
     
